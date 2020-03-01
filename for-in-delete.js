@@ -83,7 +83,7 @@ function double(obj) {
     obj[key] *= 2
   }
   return obj
-  }
+}
 
 
 
@@ -99,12 +99,12 @@ function double(obj) {
 */
 
 //Code Here
-function secrets(obj){
+function secrets(obj) {
   let emptyString = '';
   console.log(obj)
-  for(let key in obj){
-    if(key = 'sh'){
-     emptyString + obj[key]
+  for (let key in obj) {
+    if (key[0] == 's' && key[1] == 'h') {
+      emptyString += obj[key]
     }
   }
   return emptyString
@@ -139,6 +139,10 @@ function secrets(obj){
 */
 
 //Code Here
+function removePassword(obj) {
+  delete obj.password;
+  return obj
+}
 
 
 
@@ -158,8 +162,16 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+function deleteNumbers(obj) {
+  for (let key in obj) {
+    if (obj[key] > 100) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
-
+console.log(deleteNumbers(deleteTheBigNumbers))
 
 ////////// PROBLEM 7 //////////
 

@@ -183,8 +183,15 @@ console.log(deleteNumbers(deleteTheBigNumbers))
 */
 
 //Code Here
-
-
+function startsWithK(obj){
+  for(let key in obj){
+    if(key.startsWith('k')){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+console.log(startsWithK);
 
 ////////// PROBLEM 8 //////////
 
@@ -198,5 +205,12 @@ console.log(deleteNumbers(deleteTheBigNumbers))
 */
 
 //Code Here
-
+function hiddenTreasure(obj){
+  for(let key in obj){
+    if(obj[key].includes('treasure') !== true){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
